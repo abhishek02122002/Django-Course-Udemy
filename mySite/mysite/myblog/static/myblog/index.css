@@ -1,0 +1,171 @@
+/* ===== HEADER ===== */
+#main-navigation {
+  background: linear-gradient(to right, #6305dd, #390281);
+  padding: 1.5rem 12%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #e48900;
+}
+
+#main-navigation h1 a {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#main-navigation nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease, border-radius 0.3s ease;
+}
+
+#main-navigation nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+
+/* ===== WELCOME SECTION (existing styles improved) ===== */
+#welcome {
+  background: linear-gradient(to right top, #6305dd, #390281);
+  padding: 6rem 12%;
+  text-align: center;
+}
+
+#welcome header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem auto;
+}
+
+#welcome img {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border: 5px solid white;
+  border-radius: 12px;
+  background-color: #ffe1bf;
+  transform: rotateZ(-5deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease;
+}
+
+#welcome img:hover {
+  transform: rotateZ(0deg) scale(1.05);
+}
+
+#welcome h2 {
+  font-size: 3.5rem;
+  margin-top: 1rem;
+  color: #e4e4e4;
+}
+
+#welcome p {
+  color: white;
+  font-size: 1.5rem;
+}
+
+/* ===== LATEST POSTS ===== */
+#latest-posts {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 60rem;
+  max-width: 90%;
+  margin: -6rem auto 2rem auto;
+  box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
+}
+
+#latest-posts h2 {
+  text-align: center;
+  color: #390281;
+}
+
+#latest-posts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#latest-posts li {
+  flex: 1 1 calc(33% - 1rem);
+}
+
+.post {
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f7f7f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.post:hover {
+  transform: rotateY(5deg) rotateX(3deg) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.post img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.post__content {
+  padding: 1rem;
+}
+
+.post__content h3 {
+  margin: 0;
+  color: #6305dd;
+}
+
+.post__content p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* ===== ABOUT SECTION ===== */
+#about {
+  text-align: center;
+  padding: 3rem 12%;
+  background-color: #e48900;
+  margin-top: 5rem;
+}
+
+#about h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+#about p {
+  font-size: 1.5rem;
+  color: #353535;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  #welcome {
+    padding: 3rem 5%;
+  }
+
+  #welcome h2 {
+    font-size: 2.5rem;
+  }
+
+  #latest-posts ul {
+    flex-direction: column;
+  }
+
+  #latest-posts li {
+    flex: 1 1 100%;
+  }
+}

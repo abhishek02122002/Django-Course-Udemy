@@ -1,0 +1,109 @@
+body {
+  background: linear-gradient(120deg, #f4f4f4, #e7e7e7);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main-navigation {
+  background-color: #390281;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+#all-posts {
+  margin: 7rem auto;
+  width: 90%;
+  max-width: 70rem;
+}
+
+#all-posts h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #2e2e2e;
+  margin: 3rem 0;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 2rem;
+}
+
+.post a {
+  height: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  background-color: white;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center;
+}
+
+.post a:hover {
+  transform: scale(1.05) rotateX(3deg) rotateY(3deg);
+  box-shadow: 0 10px 20px rgba(57, 2, 129, 0.3);
+}
+
+.post img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.post h3 {
+  font-size: 1.2rem;
+  color: #390281;
+  margin-bottom: 0.5rem;
+}
+
+.post p {
+  color: #555;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+/* Subtle floating background animation */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(57,2,129,0.08) 20%, transparent 20%);
+  background-size: 10rem 10rem;
+  animation: moveBg 20s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBg {
+  from { transform: translate(0, 0); }
+  to { transform: translate(5rem, 5rem); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #all-posts {
+    margin: 4rem auto;
+  }
+
+  .post a {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .post img {
+    width: 5rem;
+    height: 5rem;
+  }
+}

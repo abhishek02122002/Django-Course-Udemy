@@ -66,7 +66,7 @@ class Book(models.Model):
     published_countries=models.ManyToManyField(Country)
 
     def save(self, *args, **kwargs):
-        if not self.slug:  # slug agar blank hai tabhi banaao
+        if not self.slug: 
             self.slug = slugify(self.title)
         super().save(*args, **kwargs)
 
@@ -74,4 +74,4 @@ class Book(models.Model):
         return f"{self.title} and rating is {self.rating}"
 
     def get_absolute_url(self):
-        return reverse("book-detail", args=[self.slug])  # 👈 id ki jagah slug use karo
+        return reverse("book-detail", args=[self.slug])  
